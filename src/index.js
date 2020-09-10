@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import reducer, {initialState} from './reducer';
+import { StateProvider } from './StateProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StateProvider
+      initialState={initialState}
+      //how is it and how do i dispatch the datalayer
+      //it listen to handling of  any sort of update on each component
+      reducer={reducer}
+    >
+      <App />
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
