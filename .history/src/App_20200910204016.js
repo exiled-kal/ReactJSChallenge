@@ -13,8 +13,7 @@ function App() {
 
   useEffect(() => {
     // will only run once when the app component loads...
-
-    // this act as listener when you login or logoff
+this act as listener when you login or logoff
     auth.onAuthStateChanged((authUser) => {
       console.log('THE USER IS >>> ', authUser);
 
